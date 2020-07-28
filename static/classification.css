@@ -1,0 +1,71 @@
+body {
+  background-color: #171f24;
+  color: white;
+}
+
+h1 {
+  color: rgb(195, 195, 43);
+}
+.main {
+  text-align: center;
+}
+
+#id_text {
+  color: green;
+  background-color: rgb(27, 27, 27);
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid grey;
+}
+
+input {
+  height: 40px;
+  width: 100px;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  border: 2px solid blue;
+  border-radius: 5px;
+  margin-right: 75px;
+  background-color: #3700b3;
+  color: yellow;
+  font-size: 16px;
+}
+
+.reset {
+  border: 2px solid rgb(175, 3, 3);
+  border-radius: 5px;
+  margin-left: 75px;
+  background-color: #b00020;
+  color: yellow;
+  font-size: 16px;
+}
+
+.text {
+  margin-top: 20px;
+  display: inline-block;
+  width: 340px;
+  height: 50px;
+  background-color: #171f24;
+  border: 2px solid grey;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.toxic {
+  color: red;
+}
+
+.non-toxic {
+  color: green;
+}
+
+.prediction {
+  color: rgba(112, 112, 112, 0.459);
+}

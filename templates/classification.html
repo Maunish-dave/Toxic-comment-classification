@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toxic Comment Classification</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'classification.css' %}"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="heading">
+        <h1>Toxic Comment Classification</h1>
+        <p>Write a comment and see if it is toxic or not</p>
+      </div>
+
+      <div class="form">
+        <form method="post">
+          {% csrf_token %} {{ form.text }}
+          <div class="buttons">
+            <input type="submit" class="submit" value="Submit" name="submit" />
+            <input type="submit" class="reset" value="Reset" name="reset" />
+          </div>
+        </form>
+      </div>
+
+      <div class="text">
+        <div class="result">
+          {%if toxicity == 1.0 %}
+          <p class="toxic">This comment is toxic</p>
+          {% elif toxicity == 0.0 %}
+          <p class="non-toxic">This comment is not toxic</p>
+          {% else %}
+          <p class="prediction">Prediction</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
